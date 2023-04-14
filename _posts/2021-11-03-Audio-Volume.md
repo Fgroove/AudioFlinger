@@ -4,7 +4,6 @@ author: Mista
 date: 2021-11-03 21:55:00 +0800
 categories: [audio, framework]
 tags: [audio volume]
-comments: true
 ---
 
 简单记录下 Android 原生音量管理，主要包括：
@@ -18,7 +17,7 @@ comments: true
 
 在 APM 初始化中，会加载音量曲线，主要实现在loadVolumeConfig()，代码如下
 
-```C++
+```c++
 engineConfig::ParsingResult EngineBase::loadAudioPolicyEngineConfig()
 {
     auto loadVolumeConfig = [](auto &volumeGroups, auto &volumeConfig) {
