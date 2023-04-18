@@ -6,6 +6,8 @@ categories: [Android, build]
 tags: [android HIDL]
 ---
 
+
+
 # 关于 Android HAL 与 HIDL
 
 Android 8.0之后，Google 为了解决 Android 版本碎片化问题，推出了 treble 架构，核心思想就是 vendor 分区和 system 分区的隔离。把厂商的修改限制在 vendor 分区，system 分区由 Google 把控。system 访问vendor 分区的话，需要通过 HIDL 的形式来访问。 `/dev/binder`拓展多出了两个域，即`/dev/hwbinder`和`/dev/vndbinder`，
@@ -37,7 +39,7 @@ HIDL，HAL Interface Definition Language，和AIDL类似，是用来描述硬件
 
 以下参考[AOSP相关实现](https://cs.android.com/android/platform/superproject/+/master:hardware/interfaces/audio/)，从零创建自己的HIDL服务，
 
-## 1.添加HAL目录
+## 1 添加HAL目录
 
 在 Android HAL（Hardware Abstraction Layer）中，HAL库的源代码通常存储在 `/hardware` 目录下。如果要添加新的HAL库，则需要在该目录下创建一个新的目录，并将库的源代码放在其中。以下是添加新HAL库的一般步骤：
 
@@ -79,7 +81,7 @@ HIDL，HAL Interface Definition Language，和AIDL类似，是用来描述硬件
 mkdir -phardware/interfaces/audio/effect/1.0
 ```
 
-## 2.定义 HAL 接口
+## 2 定义 HAL 接口
 
 定义 hal 接口，IEffect.hal，
 
@@ -119,7 +121,7 @@ interface IEffect {
 
 在 HAL 库的源代码中，我们需要创建一个名为 IEffect 的类，并实现接口中定义的方法。
 
-## 3.根据 HAL 文件自动生成 CPP
+## 3 根据 HAL 文件自动生成 CPP
 
 HIDL 文件可以通过 HIDL 工具链来生成对应的 C++ 代码。
 
@@ -269,7 +271,7 @@ cc_binary {
 
 rc 文件会被安装到 /vendor/etc/init/ 目录下，系统启动时会自动加载这个目录下的所有 rc 文件
 
-## 6.自动生成 HAL 接口的 Android.bp
+## 6 自动生成 HAL 接口的 Android.bp
 
 [hardware/interfaces/update-makefiles.sh](https://cs.android.com/android/platform/superproject/+/master:hardware/interfaces/update-makefiles.sh) 生成 HAL 接口的 Android.bp，
 
