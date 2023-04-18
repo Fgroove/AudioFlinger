@@ -2,8 +2,8 @@
 title: Android HAL 与 HIDL 开发实例
 author: Mista
 date: 2022-07-14 00:55:00 +0800
-categories: [Android, build]
-tags: [android HIDL]
+categories: [Android build]
+tags: [HAL & HIDL]
 ---
 
 # 关于 Android HAL 与 HIDL
@@ -483,7 +483,7 @@ root    ...    android.hardware.audio.effect@1.0-service
 
 
 
-reference:
+## reference
 
 [HAL 硬件抽象层](https://source.android.com/docs/core/architecture/hal)
 
