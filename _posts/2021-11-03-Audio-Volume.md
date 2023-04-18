@@ -292,7 +292,9 @@ audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
 2. 然后，我们将该最大值与0.5相乘，得到我们想要的音量值（50%的最大音量）。
 3. 最后，我们使用`setStreamVolume`方法将媒体音量设置为该值。其中，第一个参数为要设置音量的流类型（这里为`STREAM_MUSIC`即媒体音量），第二个参数为要设置的音量值，第三个参数为可选的标志位，此处为0。
 
-## 参考
+
+
+## references
 
 [AOSP源码搜索](https://cs.android.com/android/platform/superproject/+/master:frameworks/av/)
 
