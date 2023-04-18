@@ -27,7 +27,7 @@ HAL，Hardware Abstraction Layer，即硬件抽象层。
 
 现在已经是 Android 13，但早在 Android 8 之后就弃用了 HAL，不过由于碎片化的原因，目前还有 IoT 等设备仍在使用传统的 HAL 模式。
 
-## [HIDL](https://source.android.com/docs/core/architecture/hidl)
+## [HIDL (HAL 接口定义语言)](https://source.android.com/docs/core/architecture/hidl)
 
 HAL 是最初的硬件抽象方案，在 Android 8 之后废弃并被 HIDL 取代。
 
@@ -487,6 +487,6 @@ reference:
 
 [HAL 硬件抽象层](https://source.android.com/docs/core/architecture/hal)
 
-[HIDL](https://source.android.com/docs/core/architecture/hidl)
+[HIDL (HAL 接口定义语言)](https://source.android.com/docs/core/architecture/hidl)
 
 [Android系统开发入门-11.添加hidl服务](http://qiushao.net/2020/01/07/Android%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/11-%E6%B7%BB%E5%8A%A0hidl%E6%9C%8D%E5%8A%A1/)
